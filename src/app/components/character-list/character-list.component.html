@@ -1,0 +1,37 @@
+<div class="container mt-4 star-wars-container">
+  <div class="filter-container m-3">
+    <label for="genderFilter" class="filter-label">Filter by Gender:</label>
+    <select id="genderFilter" class="filter-dropdown" (change)="onGenderFilterChange($event)">
+      <option value="all">All</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="hermaphrodite">Hermaphrodite</option>
+      <option value="n/a">Other</option>
+      <option value="none">None</option>
+    </select>
+  </div>
+
+  <div class="list-group" style="overflow-y: scroll; height:500px;" (scroll)="onScroll($event)">
+    <div *ngFor="let character of filteredCharacters"
+      class="list-group-item list-group-item-action star-wars-character">
+      <a routerLink="/character/{{ character.url.split('/').slice(-2)[0] }}">
+        {{ character.name }}
+      </a>
+
+      <svg xmlns="http://www.w3.org/2000/svg" (click)="toggleFavorite($event, character)" viewBox="0 0 24 24" width="24"
+        height="24" [ngStyle]="{
+          'fill': character.isFavorite ? 'red' : 'none',
+          'stroke': character.isFavorite ? 'red' : '#ffe81f',
+          'stroke-width': character.isFavorite ? '0' : '2'
+        }">
+        <path
+          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+        </path>
+      </svg>
+    </div>
+  </div>
+
+  <div *ngIf="loading" class="loading-state">
+    <p>Loading...</p>
+  </div>
+</div>

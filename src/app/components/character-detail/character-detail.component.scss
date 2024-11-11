@@ -1,0 +1,114 @@
+$star-wars-yellow: #ffe81f;
+$star-wars-black: #111;
+$glow-color: rgba(255, 232, 31, 0.5);
+
+@mixin transition($property, $duration) {
+  transition: $property $duration ease;
+}
+
+.back-button {
+  background-color: transparent;
+  color: $star-wars-yellow;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  @include transition(color, 0.3s);
+
+  &:hover {
+    color: lighten($star-wars-yellow, 10%);
+    text-shadow: 0 0 5px $glow-color;
+  }
+}
+
+.character-detail-container {
+  background-color: $star-wars-black;
+  color: #fff;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px $glow-color;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+
+.character-name {
+  color: $star-wars-yellow;
+  font-size: 2rem;
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 0 0 10px $glow-color;
+  padding-bottom: 30px;
+  border-bottom: solid 2px $star-wars-yellow;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+  }
+}
+
+.character-attributes {
+  font-size: 1.5rem;
+  text-align: left;
+  width: 100%;
+  margin-top: 35px;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+
+  p {
+    margin: 15px 0;
+  }
+
+  .attribute-label {
+    color: $star-wars-yellow;
+    font-weight: bold;
+    text-shadow: 0 0 5px $glow-color;
+    margin-right: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-top: 20px;
+
+    p {
+      margin: 10px 0;
+    }
+
+    .attribute-label {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .character-name {
+    font-size: 1.3rem;
+    padding-bottom: 15px;
+  }
+
+  .character-attributes {
+    font-size: 1.1rem;
+
+    .attribute-label {
+      font-size: 1rem;
+    }
+  }
+}

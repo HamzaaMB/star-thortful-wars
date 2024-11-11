@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1731358042829" clover="3.2.0">
+  <project timestamp="1731358042829" name="All files">
+    <metrics statements="41" coveredstatements="41" conditionals="6" coveredconditionals="5" methods="12" coveredmethods="12" elements="59" coveredelements="58" complexity="0" loc="41" ncloc="41" packages="3" files="5" classes="5"/>
+    <package name="components.character-detail">
+      <metrics statements="29" coveredstatements="29" conditionals="5" coveredconditionals="5" methods="6" coveredmethods="6"/>
+      <file name="character-detail.component.html" path="/Users/hamza/Desktop/thortful-test/star-thortful-wars/src/app/components/character-detail/character-detail.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="character-detail.component.ts" path="/Users/hamza/Desktop/thortful-test/star-thortful-wars/src/app/components/character-detail/character-detail.component.ts">
+        <metrics statements="28" coveredstatements="28" conditionals="5" coveredconditionals="5" methods="6" coveredmethods="6"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="25" count="12" type="stmt"/>
+        <line num="27" count="12" type="cond" truecount="1" falsecount="0"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="32" count="10" type="stmt"/>
+        <line num="34" count="10" type="cond" truecount="1" falsecount="0"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="39" count="8" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="47" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="50" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="57" count="7" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.character-movies">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="character-movies.component.html" path="/Users/hamza/Desktop/thortful-test/star-thortful-wars/src/app/components/character-movies/character-movies.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="character-movies.component.ts" path="/Users/hamza/Desktop/thortful-test/star-thortful-wars/src/app/components/character-movies/character-movies.component.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="services">
+      <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="api.service.ts" path="/Users/hamza/Desktop/thortful-test/star-thortful-wars/src/app/services/api.service.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="16" type="stmt"/>
+        <line num="11" count="16" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

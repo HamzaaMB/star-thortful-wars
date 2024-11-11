@@ -1,0 +1,217 @@
+$star-wars-yellow: #ffe81f;
+$star-wars-black: #111;
+$glow-color: rgba(255, 232, 31, 0.5);
+
+$base-font-family: 'Arial', sans-serif;
+$base-font-size: 1rem;
+$heading-font-size: 40px;
+
+body {
+  background-color: $star-wars-black;
+  color: #fff;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  margin: 0;
+  padding: 0;
+}
+
+.star-wars-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.star-wars-title {
+  font-size: $heading-font-size;
+  margin-bottom: 1.25rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  color: $star-wars-yellow;
+
+  .filter-label {
+    margin-right: 0.625rem;
+    font-weight: bold;
+  }
+
+  .filter-dropdown {
+    background-color: $star-wars-black;
+    color: $star-wars-yellow;
+    border: 1px solid $star-wars-yellow;
+    padding: 0.3125rem 0.625rem;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    outline: none;
+    transition: border 0.3s;
+
+    &:focus {
+      border-color: lighten($star-wars-yellow, 10%);
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      width: 100%;
+      margin-bottom: 0.625rem;
+    }
+  }
+}
+
+.loading-state {
+  text-align: center;
+  color: $star-wars-yellow;
+  font-size: 1.5rem;
+  padding: 1.25rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+.list-group {
+  width: 100%;
+  max-height: 70vh;
+  font-size: 1.3rem;
+  overflow-y: auto;
+  padding: 1rem 0;
+
+  @media (max-width: 768px) {
+    max-height: 50vh;
+    font-size: 1.1rem;
+  }
+}
+
+.star-wars-character {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem;
+  color: #fff;
+  background: rgba(255, 232, 31, 0.1);
+  border: 1px solid transparent;
+  font-weight: bold;
+  transition: all 0.3s ease;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+
+  .heart-filled {
+    fill: red;
+    stroke: red;
+  }
+
+  .heart-empty {
+    fill: none;
+    stroke: $star-wars-yellow;
+    stroke-width: 2px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    fill: lighten($star-wars-yellow, 50%);
+  }
+}
+
+
+
+.star-wars-button {
+  background-color: $star-wars-black;
+  color: $star-wars-yellow;
+  border: 1px solid $star-wars-yellow;
+  font-size: 1rem;
+  padding: 0.625rem 1.25rem;
+  font-weight: bold;
+  margin-right: 0.625rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $star-wars-yellow;
+    color: $star-wars-black;
+    border-color: $star-wars-yellow;
+    box-shadow: 0 0 10px $glow-color;
+  }
+
+  &:disabled {
+    color: rgba(255, 232, 31, 0.3);
+    border-color: rgba(255, 232, 31, 0.3);
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .star-wars-container {
+    padding: 0.5rem;
+  }
+
+  .filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .filter-label {
+      margin-bottom: 0.625rem;
+    }
+
+    .filter-dropdown {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+
+  .list-group {
+    max-height: 40vh;
+    font-size: 1rem;
+  }
+
+  .star-wars-button {
+    font-size: 0.8rem;
+  }
+
+  .loading-state {
+    font-size: 1.1rem;
+  }
+}

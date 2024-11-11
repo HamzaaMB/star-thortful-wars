@@ -1,0 +1,9 @@
+<div *ngIf="movies && movies.length > 0">
+  <h3>Movies</h3>
+  <ul>
+    <li *ngFor="let movie of movies">{{ movie }}</li>
+  </ul>
+</div>
+<div *ngIf="movies && movies.length === 0">
+  <p>This character has not appeared in any movies.</p>
+</div>

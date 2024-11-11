@@ -1,0 +1,36 @@
+<div class="character-detail-container mt-4" *ngIf="character">
+  <button class="back-button" (click)="goBack()" aria-label="Go back to previous page">
+    ← Back
+  </button>
+
+  <h2 class="character-name" tabindex="0" role="heading" aria-level="1">{{ character.name }}</h2>
+
+  <div class="character-attributes">
+    <p>
+      <span class="attribute-label" id="heightLabel">Height:</span>
+      <span aria-labelledby="heightLabel">{{ character.height }} cm</span>
+    </p>
+    <p>
+      <span class="attribute-label" id="massLabel">Mass:</span>
+      <span aria-labelledby="massLabel">{{ character.mass }} kg</span>
+    </p>
+    <p>
+      <span class="attribute-label" id="hairColorLabel">Hair Color:</span>
+      <span aria-labelledby="hairColorLabel">{{ character.hair_color }}</span>
+    </p>
+    <p>
+      <span class="attribute-label" id="skinColorLabel">Skin Color:</span>
+      <span aria-labelledby="skinColorLabel">{{ character.skin_color }}</span>
+    </p>
+    <p>
+      <span class="attribute-label" id="eyeColorLabel">Eye Color:</span>
+      <span aria-labelledby="eyeColorLabel">{{ character.eye_color }}</span>
+    </p>
+    <p>
+      <span class="attribute-label" id="birthYearLabel">Birth Year:</span>
+      <span aria-labelledby="birthYearLabel">{{ character.birth_year }}</span>
+    </p>
+  </div>
+  <div *ngIf="errorMessage" class="error-message" role="alert">
+    <p>{{ errorMessage }}</p>
+  </div>
